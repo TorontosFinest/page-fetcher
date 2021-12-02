@@ -3,11 +3,6 @@ const readline = require("readline");
 const fs = require("fs");
 const args = process.argv.slice(2);
 
-reading = readline.createInterface({
-  input: process.stdin,
-  output: process.stdout,
-});
-
 request(args[0], (error, response, body) => {
   console.log(error);
   console.log("statusCode:", response && response.statusCode);
